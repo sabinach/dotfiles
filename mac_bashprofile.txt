@@ -33,7 +33,7 @@ alias bs="source ~/.bash_profile"
 
 # Link executable for Julia
 # https://en.wikibooks.org/wiki/Introducing_Julia/Getting_started#On_macOS_X
-ln -fs "/Applications/Julia-1.4.app/Contents/Resources/julia/bin/julia" /usr    /local/bin/julia
+ln -fs "/Applications/Julia-1.4.app/Contents/Resources/julia/bin/julia" /usr/local/bin/julia
 
 
 #####################################
