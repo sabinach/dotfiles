@@ -1,5 +1,8 @@
 UBUNTU SOFTWARE SETUP
 
+# info on linux paths
+https://unix.stackexchange.com/questions/8656/usr-bin-vs-usr-local-bin-on-linux
+
 # update keys for keyserver
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 sudo apt-get update
@@ -42,11 +45,13 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
-**Add to github account** (Settings -> SSH and GPG keys -> New SSH key)
+**Add to github account (Settings -> SSH and GPG keys -> New SSH key) **
 
 # chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
+
+# 
 
 # Juypter Notebook (Python3) -- NOT WORKING
 (https://datawookie.netlify.app/blog/2017/06/setting-up-jupyter-with-python-3-on-ubuntu/)
@@ -66,19 +71,18 @@ tar -xvzf julia-1.1.0-linux-x86_64.tar.gz
 sudo cp -r julia-1.1.0 /opt/
 sudo ln -s /opt/julia-1.1.0/bin/julia /usr/local/bin/julia
 
-# Jupyter. Notebook (Julia)
+# Jupyter Notebook (Julia)
 https://datatofish.com/add-julia-to-jupyter/
 **Open Julia in Terminal**
 using Pkg
 Pkg.add("IJulia")
 
-# virtualenv (Python3)
-(https://docs.python-guide.org/dev/virtualenvs/)
-pip install virtualenv
-virtualenv --version
+# venv (Python3)
+(https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04)
+sudo apt-get install -y python3-venv
 mkdir <project_folder>
 cd <project_folder>
-virtualenv <venv_name>
+python3 -m venv <venv_name>
 source <venv_name>/bin/activate
 deactivate
 
