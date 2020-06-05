@@ -1,0 +1,14 @@
+# ignore for macs
+.DS_Store
+.DS_Store?
+.icloud
+
+# ignore
+.ipynb_checkpoints
+.pyc
+
+# ignore large files
+*.MOV
+*.mp4
+*.mp3
+*.m4v

@@ -1,0 +1,68 @@
+~/.BASH_PROFILE SETTINGS
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
+
+#export PATH=$PATH:~/.local/bin
+export PYTHONPATH="/usr/lib/python2.7/site-packages:$PYTHONPATH"
+
+# Alias for python to default to python2.
+alias python=/usr/bin/python2.7
+alias python3=/usr/local/bin/python3
+
+# Alias to get to personal-website
+alias pw="cd ~/Desktop/Sites/personal-website/"
+alias sc="cd ~/Desktop/Sites/skating-club-www/"
+
+# Aliases for Athena Dialup
+alias athena="ssh -CX sabinach@athena.dialup.mit.edu"
+alias athena-mount="sshfs sabinach@athena.dialup.mit.edu:/afs/athena.mit.edu/user/s/a/sabinach ~/athena_dialup"
+
+# Alias for Changing Terminal SSH Color
+alias ssh="~/.ssh/color.sh"
+
+# Aliases for jupyter-notebook
+alias jn="jupyter-notebook"
+
+# Aliases for rms-website (deploy gh-pages update)
+alias rd="git subtree push --prefix _build/html origin gh-pages"
+
+# Alias for sourcing ~/.bash_profile
+alias bv="vim ~/.bash_profile"
+alias bs="source ~/.bash_profile"
+
+# Alias for Julia
+alias julia="exec '/Applications/Julia-1.4.app/Contents/Resources/julia/bin/julia'"
+
+
+#####################################
+# DEPRECATED
+
+# Aliases for MIT Driverless
+alias driverless-vm="ssh sabinach@172.16.246.128"
+alias driverless-mount="sshfs sabinach@172.16.246.128:/home/sabinach/ ~/driverless_ws"
+
+# Aliases for Fold.It Server
+alias foldit="ssh sabinach@analytics.fold.it"
+
+# Aliases for RSS 2019
+alias rc="ssh -CX racecar@172.16.246.130"
+alias mount="sshfs racecar@172.16.246.130:/home/racecar/ ~/rss2019"
+
+# Aliases for LL flight goggles
+alias fg="ssh -CX flightgoggles@127.0.0.1 -p 2222"
+alias mfg="sshfs flightgoggles@127.0.0.1:/home/flightgoggles/ ~/flightgoggles -p 2222"
+
+# Aliases for MASLAB 2020 NUC
+alias ml="ssh team3@nuchost"
+alias mml="sshfs -o allow_other,defer_permissions team3@nuchost:/home/team3 ~/maslab"
+# sudo diskutil umount force /path/to/mount (to force unmount, if mount fails)
+
+# ALiases for MASLAB 2020 VM
+alias mlvm="ssh maslab-team3@nuchost"
+alias mmlvm="sshfs -o allow_other,defer_permissions maslab-team3@192.168.0.115:/home/ ~/maslab-vm"
+
+# Aliases for RSS 2020 VM
+alias rssvm="ssh racecar@192.168.0.177"
+alias mrssvm="sshfs -o allow_other,defer_permissions racecar@192.168.0.177:/home/racecar/ ~/racecar-vm"
+
