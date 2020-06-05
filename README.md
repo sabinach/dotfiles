@@ -1,1 +1,1 @@
-# system_setup
+# device-setup
