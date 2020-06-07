@@ -10,10 +10,6 @@ export PYTHONPATH="/usr/lib/python2.7/site-packages:$PYTHONPATH"
 alias python=/usr/bin/python2.7
 alias python3=/usr/local/bin/python3
 
-# Aliases for Athena Dialup
-alias athena="ssh -CX sabinach@athena.dialup.mit.edu"
-alias athena-mount="sshfs sabinach@athena.dialup.mit.edu:/afs/athena.mit.edu/user/s/a/sabinach ~/athena_dialup"
-
 # Alias for Changing Terminal SSH Color
 alias ssh="~/.ssh/color.sh"
 
