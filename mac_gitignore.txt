@@ -8,7 +8,7 @@
 .pyc
 
 # ignore large files
-*.MOV
-*.mp4
-*.mp3
-*.m4v
+.MOV
+.mp4
+.mp3
+.m4v
