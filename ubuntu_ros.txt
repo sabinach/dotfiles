@@ -8,7 +8,7 @@ https://github.com/sabinach/maslab-team3/blob/master/docs/useful_guides.md
 [Melodic] http://wiki.ros.org/melodic/Installation/Ubuntu
  
 # added “source devel/setup.bash” to ~/.bashrc
-source /home/team3/team-3/catkin_ws/devel/setup.bash
+source /home/<user_name>/catkin_ws/devel/setup.bash
 
 # install qt (required for hector slam)
 sudo apt install qt4-default
@@ -46,11 +46,11 @@ On remote host, in ~/.bashrc:
 
 # ros sourcing
 source /opt/ros/melodic/setup.bash
-source /home/team3/team-3/catkin_ws/devel/setup.bash
+source /home/<user_name>/catkin_ws/devel/setup.bash
 
 # ros shortcuts
-alias cws="source ~/team-3/catkin_ws/devel/setup.bash"
-alias cw="cd ~/team-3/catkin_ws/"
+alias cws="source ~/catkin_ws/devel/setup.bash"
+alias cw="cd ~/catkin_ws/"
 
 -------------------------------------------------
 
@@ -58,34 +58,34 @@ PACKAGES ADDED
 
 # created new “autobot” package
 (http://wiki.ros.org/ROS/Tutorials/CreatingPackage)
-cd ~/team-3/catkin_ws/src
+cd ~/catkin_ws/src
 catkin_create_pkg autobot std_msgs rospy roscpp
-cd ~/team-3/catkin_ws
+cd ~/catkin_ws
 catkin_make
 
 # kitware
 (https://github.mit.edu/maslab-2020/kitware)
-cd ~/team-3/catkin_ws/src
+cd ~/catkin_ws/src
 git clone https://github.com/nmoroze/kitware.git
-cd ~/team-3/catkin_ws
+cd ~/catkin_ws
 catkin_make
-source ~/team-3/catkin_ws/devel/setup.bash
+source ~/catkin_ws/devel/setup.bash
 
 # ydlidar
-cd ~/team-3/catkin_ws/src
+cd ~/catkin_ws/src
 git clone https://github.com/EAIBOT/ydlidar.git
-cd ~/team-3/catkin_ws
+cd ~/catkin_ws
 catkin_make
-source ~/team-3/catkin_ws/devel/setup.bash
+source ~/catkin_ws/devel/setup.bash
 roscd ydlidar/startup/
 sudo chmod 777 ./*
 sudo sh initenv.sh
 
 # hectorSLAM
 (http://wiki.ros.org/hector_slam)
-cd ~/team-3/catkin_ws/src
+cd ~/catkin_ws/src
 git clone https://github.com/tu-darmstadt-ros-pkg/hector_slam
-cd ~/team-3/catkin_ws
+cd ~/catkin_ws
 catkin_make
 **change ALL references of /base_footprint to /base_link (use git to find files)**
 **create launch file (changed all_nodes.launch to hector_slam.launch): 
@@ -93,20 +93,20 @@ https://archit0994.wixsite.com/architshah/post/manage-your-blog-from-your-live-s
 **saved new .rviz file to include /map topic, and changed hector_slam.launch to reference new .rviz file instead of lidar.rviz**
 
 # joy_node
-cd ~/team-3/catkin_ws/src
+cd ~/catkin_ws/src
 git clone https://github.com/ros-drivers/joystick_drivers
 mv joystick_drivers/joy/ .
 rm -r joystick_drivers
-cd ~/team-3/catkin_ws
+cd ~/catkin_ws
 catkin_make
 
 # cartographer
 (https://github.com/mit-rss/cartographer_config)
 (https://github.com/googlecartographer)
 sudo apt-get install ninja-build python-wstool python-rosdep
-cd ~/team-3/
+cd ~
 mkdir cartographer_ws
-cd ~/team-3/cartographer_ws
+cd ~/cartographer_ws
 wstool init src
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
 wstool update -t src
@@ -116,13 +116,13 @@ sudo rosdep init (**it's okay if there's an error here**)
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
 catkin_make_isolated --install --use-ninja
-source ~/team-3/cartographer_ws/install_isolated/setup.bash
-**add this to your ~/.bashrc --> source ~/team-3/cartographer_ws/install_isolated/setup.bash**
-cd ~/team-3/catkin_ws/src
+source ~/cartographer_ws/install_isolated/setup.bash
+**add this to your ~/.bashrc --> source ~/cartographer_ws/install_isolated/setup.bash**
+cd ~/catkin_ws/src
 git clone https://github.com/mit-rss/cartographer_config.git
-cd ~/team-3/catkin_ws/
+cd ~/catkin_ws/
 catkin_make
-source ~/team-3/catkin_ws/devel/setup.bash
+source ~/catkin_ws/devel/setup.bash
 
 
 
