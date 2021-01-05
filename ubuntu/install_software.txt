@@ -47,6 +47,24 @@ sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
 **Add to github account (Settings -> SSH and GPG keys -> New SSH key) **
 
+# general ssh setup
+ssh-keygen -t rsa -b 4096 -C
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+vim ~/.ssh/config
+  >>> 
+
+# openssl 
+(https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/)
+sudo apt update
+sudo apt install openssh-server
+sudo systemctl status ssh
+whoami
+ip a (get the ip address next to inet)
+ssh username@ip_address (DO THIS ON ANOTHER MACHINE TO CHECK)
+
 # chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
