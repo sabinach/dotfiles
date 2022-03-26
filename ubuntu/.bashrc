@@ -1,6 +1,4 @@
-~/.BASHRC SETTINGS
-
-# bashrc shortcuts
+# shortcuts
 alias bs="source ~/.bashrc"
 alias bv="vim ~/.bashrc"
 
